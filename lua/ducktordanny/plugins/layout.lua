@@ -71,4 +71,7 @@ return {
       require('todo-comments').setup {}
     end
   },
+
+  -- Markdown preview
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" }
 }
