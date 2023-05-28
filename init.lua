@@ -27,4 +27,3 @@ require("ducktordanny.remaps.basic")
 require("ducktordanny.remaps.lsp")
 require("ducktordanny.remaps.telescope")
 require("ducktordanny.remaps.treesitter")
-
