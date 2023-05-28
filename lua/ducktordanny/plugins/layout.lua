@@ -39,9 +39,6 @@ return {
             text_align = 'left'
           }},
           diagnostics = 'nvim_lsp',
-          indicator = {
-            style = 'underline',
-          },
         }
       }
     end
