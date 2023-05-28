@@ -24,7 +24,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Vertical line for character limit in a line
-vim.o.colorcolumn = "80"
+vim.o.colorcolumn = "120"
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
