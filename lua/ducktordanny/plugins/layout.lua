@@ -1,4 +1,16 @@
 return {
+  -- Colorize inside the editor
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function ()
+      require('colorizer').setup {
+        '*';
+        css = { rgb_fn = true; };
+        scss = { rgb_fn = true; };
+      }
+    end,
+  },
+
   -- Theme inspired by Atom
   {
     'navarasu/onedark.nvim',
@@ -27,7 +39,10 @@ return {
             text_align = 'left'
           }},
           diagnostics = 'nvim_lsp',
-       }
+          indicator = {
+            style = 'underline',
+          },
+        }
       }
     end
   },
