@@ -44,18 +44,20 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {
-  -- clangd = {},
-  -- gopls = {},
-  -- pyright = {},
-  -- rust_analyzer = {},
-  -- tsserver = {},
-
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
   },
+  tailwindcss = {},
+  angularls = {},
+  cssls = {},
+  cssmodules_ls = {},
+  eslint = {},
+  html = {},
+  jsonls = {},
+  tsserver = {},
 }
 
 -- Enable the following language servers
