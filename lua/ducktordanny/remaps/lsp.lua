@@ -43,6 +43,7 @@ local on_attach = function(_, bufnr)
   end, { desc = 'Format current buffer with LSP' })
 end
 
+local util = require('lspconfig.util')
 local servers = {
   -- clangd = {},
   -- gopls = {},
@@ -56,6 +57,9 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  angularls = {
+    root_dir = util.root_pattern('angular.json', 'project.json')
+  }
 }
 
 -- Enable the following language servers
@@ -97,6 +101,9 @@ local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
 luasnip.config.setup {}
+require('luasnip.loaders.from_vscode').lazy_load {
+  paths = { './snippets/angular' }
+}
 
 cmp.setup {
   snippet = {
