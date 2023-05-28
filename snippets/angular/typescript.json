@@ -31,7 +31,6 @@
       "\ttemplateUrl: '${2:name}.template.html',",
       "\tstandalone: true,",
       "})",
-      "",
       "export class ${3:Name}Component {",
       "\tconstructor() {}",
       "}"
@@ -48,7 +47,6 @@
       "\ttemplate: `$0`",
       "\tstandalone: true,",
       "})",
-      "",
       "export class ${2:Name}Component {",
       "\tconstructor() {}",
       "}"
@@ -64,7 +62,6 @@
       "\tname: '${1:selector-name}'",
       "\tstandalone: true,",
       "})",
-      "",
       "export class ${2:Name}Pipe implements PipeTransform {",
       "\ttransform(value: any, ...args: any[]): any {",
       "\t\t$0",
