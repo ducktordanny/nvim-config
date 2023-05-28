@@ -45,4 +45,12 @@ return {
       require('vgit').setup {}
     end
   },
+
+  -- LazyGit
+  {
+    'kdheepak/lazygit.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+  },
 }

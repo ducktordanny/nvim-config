@@ -45,7 +45,7 @@ vim.keymap.set('n', '<leader>bc', ':BufferLinePickClose<cr>', { desc = '[B]uffer
 vim.keymap.set('n', '<leader>bo', ':BufferLinePick<cr>', { desc = '[B]ufferLine Pick for [O]pen' })
 vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
 vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
-vim.keymap.set('n', '<leader>c', ':bd<cr>', { desc = '[C]lose Buffer' })
+vim.keymap.set('n', '<leader>c', ':bd<cr>:bprevious<cr>', { desc = '[C]lose Current Buffer' })
 
 -- git, gitsigns and vgit remaps
 vim.keymap.set('n', '<leader>gl', ':Git log --decorate --graph<cr>', { desc = '[G]it [L]og' })
@@ -55,6 +55,9 @@ vim.keymap.set('n', '<leader>gc', ':Git commit -m ""', { desc = '[G]it [C]ommit'
 vim.keymap.set('n', '<leader>gs', ':Git status<cr>', { desc = '[G]it [S]tatus' })
 vim.keymap.set('n', '<leader>gp', ':Git push', { desc = '[G]it [P]ush' })
 vim.keymap.set('n', '<leader>gf', ':Git fetch', { desc = '[G]it [F]etch' })
+vim.keymap.set('n', '<leader>gb', ':Git blame<cr>', { desc = '[G]it [B]lame' })
+vim.keymap.set('n', '<leader>gd', ':VGit project_diff_preview<cr>', { desc = '[G]it [D]iff preview' })
+vim.keymap.set('n', '<leader>l', ':LazyGit<cr>', { desc = '[L]azyGit' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
