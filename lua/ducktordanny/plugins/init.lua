@@ -27,6 +27,7 @@ return {
   },
   'jose-elias-alvarez/null-ls.nvim',
   'MunifTanjim/prettier.nvim',
+  'RRethy/vim-illuminate',
 
   -- Autocompletion
   {
