@@ -56,6 +56,11 @@ return {
         filters = {custom = {'^.git$', '^.DS_Store$'}},
         git = {ignore = false},
         view = {width = 45},
+        renderer = {
+          indent_markers = {
+            enable = true,
+          },
+        },
       }
     end,
   },
