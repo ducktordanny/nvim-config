@@ -68,3 +68,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- SymbolsOutline
 vim.keymap.set('n', '<leader>s', ':SymbolsOutline<cr>', { desc = '[S]ymbolsOutline'})
+
+-- Glow
+vim.keymap.set('n', '<leader>md', ':Glow<cr>', { desc = 'Glow [M]ark[d]own' })
