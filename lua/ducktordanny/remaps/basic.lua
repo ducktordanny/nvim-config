@@ -49,7 +49,7 @@ vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close curren
 vim.keymap.set('n', 'T', ':bprevious<cr>', { desc = 'Buffer previous' })
 
 -- git, gitsigns and vgit remaps
-vim.keymap.set('n', '<leader>gl', ':Git log --decorate --graph<cr>', { desc = '[G]it [L]og' })
+vim.keymap.set('n', '<leader>gl', ':Flogsplit<cr>', { desc = '[G]it [L]og' })
 vim.keymap.set('n', '<leader>gr', ':Gitsigns refresh<cr>', { desc = '[G]itsigns [R]efresh' })
 vim.keymap.set('n', '<leader>ga', ':Git add --all<cr>', { desc = '[G]it add [a]ll' })
 vim.keymap.set('n', '<leader>gc', ':Git commit -m ""', { desc = '[G]it [C]ommit' })

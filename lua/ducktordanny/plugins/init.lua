@@ -5,6 +5,12 @@ return {
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
+  {
+    'rbong/vim-flog',
+    dependencies = {
+      'tpope/vim-fugitive',
+    },
+  },
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
