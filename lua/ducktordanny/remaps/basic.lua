@@ -45,7 +45,7 @@ vim.keymap.set('n', '<leader>bc', ':BufferLinePickClose<cr>', { desc = '[B]uffer
 vim.keymap.set('n', '<leader>bo', ':BufferLinePick<cr>', { desc = '[B]ufferLine Pick for [O]pen' })
 vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
 vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
-vim.keymap.set('n', '<leader>c', ':bd<cr>:bprevious<cr>', { desc = '[C]lose Current Buffer' })
+vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = '[C]lose Current Buffer' })
 
 -- git, gitsigns and vgit remaps
 vim.keymap.set('n', '<leader>gl', ':Git log --decorate --graph<cr>', { desc = '[G]it [L]og' })
