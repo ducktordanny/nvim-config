@@ -114,4 +114,5 @@ return {
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   },
+  { 'simrat39/symbols-outline.nvim', opts = {} },
 }
