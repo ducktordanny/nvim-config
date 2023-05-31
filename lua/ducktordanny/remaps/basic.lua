@@ -59,6 +59,7 @@ vim.keymap.set('n', '<leader>gf', ':Git fetch', { desc = '[G]it [F]etch' })
 vim.keymap.set('n', '<leader>gb', ':Git blame<cr>', { desc = '[G]it [B]lame' })
 vim.keymap.set('n', '<leader>gd', ':VGit project_diff_preview<cr>', { desc = '[G]it [D]iff preview' })
 vim.keymap.set('n', '<leader>l', ':LazyGit<cr>', { desc = '[L]azyGit' })
+vim.keymap.set('n', '<leader>gu', ':Gitsigns reset_hunk<cr>', { desc = '[G]it [U]ndo hunk' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
