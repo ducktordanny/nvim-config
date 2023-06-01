@@ -115,4 +115,6 @@ return {
     end,
   },
   { 'simrat39/symbols-outline.nvim', opts = {} },
+  -- NOTE: For practicing some vim moves uncomment and install the plugin then do :VimBeGood
+  -- 'ThePrimeagen/vim-be-good',
 }
