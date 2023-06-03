@@ -20,6 +20,18 @@ return {
       vim.cmd.colorscheme 'onedark'
     end,
   },
+  {
+    'xiyaowong/transparent.nvim',
+    opts = {
+      extra_groups = {
+        'NvimTreeNormal', -- NvimTree
+        'NvimTreeEndOfBuffer',
+        'NvimTreeCursorLine',
+        'BufferLineDevIconLua',
+        'BufferLineDevIconMd',
+      },
+    }
+  },
 
   -- Showing opened buffers in the top
   {
@@ -35,12 +47,18 @@ return {
           offsets = {{
             filetype = 'NvimTree',
             text = 'neovim',
-            highlight = 'Directory',
+            highlight = 'NvimTreeNormal',
             text_align = 'left'
           }},
           diagnostics = 'nvim_lsp',
         }
       }
+      vim.g.transparent_groups = vim.list_extend(
+        vim.g.transparent_groups or {},
+        vim.tbl_map(function(v)
+          return v.hl_group
+        end, vim.tbl_values(require('bufferline.config').highlights))
+      )
     end
   },
 
