@@ -28,6 +28,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Undotree stuff
 vim.keymap.set('n', '<leader>u', ':UndotreeToggle<cr>', {desc = '[U]ndotree'})
+
 -- nvim-tree.lua remaps and other stuff
 local function open_nvim_tree()
   require('nvim-tree.api').tree.open()
@@ -72,3 +73,7 @@ vim.keymap.set('n', '<leader>s', ':SymbolsOutline<cr>', { desc = '[S]ymbolsOutli
 
 -- Glow
 vim.keymap.set('n', '<leader>md', ':Glow<cr>', { desc = 'Glow [M]ark[d]own' })
+
+-- Better visual mode indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
