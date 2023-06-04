@@ -109,10 +109,16 @@ return {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'nvim-telescope/telescope-live-grep-args.nvim',
     },
     config = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
+      require('telescope').load_extension('live_grep_args')
     end,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    dependencies = {'nvim-treesitter/nvim-treesitter'},
   },
   { 'simrat39/symbols-outline.nvim', opts = {} },
   -- NOTE: For practicing some vim moves uncomment and install the plugin then do :VimBeGood
