@@ -39,7 +39,6 @@ local function open_nvim_tree()
 end
 
 require("nvim-tree.api").tree.toggle({ find_file = true, focus = false })
-vim.keymap.set('n', 'F', ':NvimTreeFocus<cr>', { desc = 'NvimTree [F]ocus' })
 vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', { desc = '[N]vimTree [T]oggle' })
 vim.keymap.set('n', '<leader>ns', ':NvimTreeFindFile<cr>', { desc = '[N]vimTree [S]earch_file' })
 vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<cr>', { desc = '[N]vimTree [R]efresh' })
@@ -51,7 +50,6 @@ vim.keymap.set('n', '<leader>bo', ':BufferLinePick<cr>', { desc = '[B]ufferLine 
 vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
 vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
 vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close current buffer window' })
-vim.keymap.set('n', 'T', ':bprevious<cr>', { desc = 'Buffer previous' })
 
 -- git, gitsigns and vgit remaps
 vim.keymap.set('n', '<leader>gl', ':Flogsplit<cr>', { desc = '[G]it [L]og' })
