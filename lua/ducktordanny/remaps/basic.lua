@@ -33,23 +33,21 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- Undotree stuff
 vim.keymap.set('n', '<leader>u', ':UndotreeToggle<cr>', {desc = '[U]ndotree'})
 
--- nvim-tree.lua remaps and other stuff
-local function open_nvim_tree()
-  require('nvim-tree.api').tree.open()
-end
-
-require("nvim-tree.api").tree.toggle({ find_file = true, focus = false })
 vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<cr>', { desc = '[N]vimTree [T]oggle' })
 vim.keymap.set('n', '<leader>ns', ':NvimTreeFindFile<cr>', { desc = '[N]vimTree [S]earch_file' })
 vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<cr>', { desc = '[N]vimTree [R]efresh' })
-vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
+
+-- harpoon and buffer remaps
+vim.keymap.set('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, { desc = '[H]arpoon toggle' })
+vim.keymap.set('n', 'N', require('harpoon.ui').nav_next, { desc = 'Harpoon [N]ext' })
+vim.keymap.set('n', 'P', require('harpoon.ui').nav_prev, { desc = 'Harpoon [P]revious' })
+vim.keymap.set('n', '<leader>ha', require('harpoon.mark').add_file, { desc = '[H]arpoon [A]dd' })
+vim.keymap.set('n', '<leader>W', ':%bd|e#|bd#<cr>', { desc = 'Close all buffers but this' })
 
 -- bufferline remaps and other config
-vim.keymap.set('n', '<leader>bc', ':BufferLinePickClose<cr>', { desc = '[B]ufferLine Pick_[C]lose' })
-vim.keymap.set('n', '<leader>bo', ':BufferLinePick<cr>', { desc = '[B]ufferLine Pick for [O]pen' })
-vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
-vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
-vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close current buffer window' })
+-- vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
+-- vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
+-- vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close current buffer window' })
 
 -- git, gitsigns and vgit remaps
 vim.keymap.set('n', '<leader>gl', ':Flogsplit<cr>', { desc = '[G]it [L]og' })
