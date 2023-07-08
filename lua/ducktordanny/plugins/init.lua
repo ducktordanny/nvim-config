@@ -47,6 +47,7 @@ return {
       map_cr = true,
     },
   },
+  'alvan/vim-closetag',
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
