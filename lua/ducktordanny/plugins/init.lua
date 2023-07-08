@@ -18,7 +18,8 @@ return {
   -- LSP thingies
   {
     -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
+    'ducktordanny/nvim-lspconfig',
+    branch = 'feat/nx-support-for-angularls',
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
       'williamboman/mason.nvim',
