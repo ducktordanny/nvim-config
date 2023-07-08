@@ -38,6 +38,35 @@ return {
     'ThePrimeagen/harpoon'
   },
 
+  -- Showing opened buffers in the top
+  {
+    'akinsho/bufferline.nvim',
+    version = 'v3.*',
+    dependencies = {'nvim-tree/nvim-web-devicons'},
+    config = function()
+      require('bufferline').setup {
+        options = {
+          buffer_close_icon = '𝙓',
+          close_icon = '',
+          numbers = 'ordinal',
+          offsets = {{
+            filetype = 'NvimTree',
+            text = 'neovim',
+            highlight = 'NvimTreeNormal',
+            text_align = 'left'
+          }},
+          diagnostics = 'nvim_lsp',
+        }
+      }
+      vim.g.transparent_groups = vim.list_extend(
+        vim.g.transparent_groups or {},
+        vim.tbl_map(function(v)
+          return v.hl_group
+        end, vim.tbl_values(require('bufferline.config').highlights))
+      )
+    end
+  },
+
   -- Fancy sidebar
   {
     'nvim-tree/nvim-tree.lua',

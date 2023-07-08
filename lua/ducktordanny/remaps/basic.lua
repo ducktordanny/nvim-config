@@ -39,20 +39,17 @@ vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<cr>', { desc = '[N]vimTree [
 
 -- harpoon and buffer remaps
 vim.keymap.set('n', '<leader>h', require('harpoon.ui').toggle_quick_menu, { desc = '[H]arpoon toggle' })
-vim.keymap.set('n', 'N', require('harpoon.ui').nav_next, { desc = 'Harpoon [N]ext' })
-vim.keymap.set('n', 'P', require('harpoon.ui').nav_prev, { desc = 'Harpoon [P]revious' })
+vim.keymap.set('n', '<C-n>', require('harpoon.ui').nav_next, { desc = 'Harpoon [N]ext' })
+vim.keymap.set('n', '<C-p>', require('harpoon.ui').nav_prev, { desc = 'Harpoon [P]revious' })
 vim.keymap.set('n', '<leader>ha', require('harpoon.mark').add_file, { desc = '[H]arpoon [A]dd' })
 vim.keymap.set('n', '<leader>WW', ':%bd|e#|bd#<cr>', { desc = 'Close all buffers but this' })
 
 -- quick switch between buffers
-vim.keymap.set('n', '<C-n>', ':bnext<cr>', { desc = 'Next buffer' })
-vim.keymap.set('n', '<C-p>', ':bprevious<cr>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close current buffer window and open previous' })
 
 -- bufferline remaps and other config
--- vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = '[B]ufferLine Cycle_[N]ext' })
--- vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = '[B]ufferLine Cycle_[P]rev' })
--- vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close current buffer window' })
+vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = 'BufferLine Cycle_[N]ext' })
+vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = 'BufferLine Cycle_[P]rev' })
 
 -- git, gitsigns and vgit remaps
 vim.keymap.set('n', '<leader>gl', ':Flogsplit<cr>', { desc = '[G]it [L]og' })
