@@ -44,7 +44,8 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Line wrapping
-vim.o.wrap = false
+-- vim.o.wrap = false
+vim.o.linebreak = true
 
 -- Backspace
 vim.o.backspace = "indent,eol,start"
