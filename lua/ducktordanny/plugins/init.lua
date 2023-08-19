@@ -32,7 +32,12 @@ return {
       'folke/neodev.nvim',
     },
   },
-  'jose-elias-alvarez/null-ls.nvim',
+  {
+    'nvimdev/guard.nvim',
+    dependencies = {
+      'ducktordanny/nvim-lspconfig',
+    },
+  },
   'MunifTanjim/prettier.nvim',
   'RRethy/vim-illuminate',
 

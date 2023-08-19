@@ -48,8 +48,8 @@ vim.keymap.set('n', '<leader>WW', ':%bd|e#|bd#<cr>', { desc = 'Close all buffers
 vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close current buffer window and open previous' })
 
 -- bufferline remaps and other config
-vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>:LspStart<cr>', { desc = 'BufferLine Cycle_[N]ext' })
-vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>:LspStart<cr>', { desc = 'BufferLine Cycle_[P]rev' })
+vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = 'BufferLine Cycle_[N]ext' })
+vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = 'BufferLine Cycle_[P]rev' })
 
 -- git, gitsigns and vgit remaps
 vim.keymap.set('n', '<leader>gl', ':Flogsplit<cr>', { desc = '[G]it [L]og' })
