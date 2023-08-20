@@ -32,6 +32,7 @@ return {
       'folke/neodev.nvim',
     },
   },
+  -- Formatting
   {
     'nvimdev/guard.nvim',
     dependencies = {
@@ -63,11 +64,11 @@ return {
     opts = {
       -- See `:help gitsigns.txt`
       signs = {
-        add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-        change = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
-        delete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-        topdelete = { hl = "GitSignsDelete", text = "契", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-        changedelete = { hl = "GitSignsChange", text = "▎", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+        add = { hl = 'GitSignsAdd', text = '▎', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+        change = { hl = 'GitSignsChange', text = '▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+        delete = { hl = 'GitSignsDelete', text = '契', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+        topdelete = { hl = 'GitSignsDelete', text = '契', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+        changedelete = { hl = 'GitSignsChange', text = '▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
       },
     },
   },
@@ -79,7 +80,7 @@ return {
     opts = {
       options = {
         theme = 'onedark',
-        component_separators = { left = '', right = '|'},
+        component_separators = { left = '', right = '|' },
         section_separators = '',
       },
     },
@@ -119,14 +120,13 @@ return {
     },
     config = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
-      require('telescope').load_extension('live_grep_args')
+      require('telescope').load_extension 'live_grep_args'
     end,
   },
   {
     'nvim-treesitter/nvim-treesitter-context',
-    dependencies = {'nvim-treesitter/nvim-treesitter'},
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
-  { 'simrat39/symbols-outline.nvim', opts = {} },
   -- NOTE: For practicing some vim moves uncomment and install the plugin then do :VimBeGood
   -- 'ThePrimeagen/vim-be-good',
 }
