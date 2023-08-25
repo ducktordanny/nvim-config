@@ -41,6 +41,7 @@ vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<cr>', { desc = '[N]vimTree [
 -- quick switch between buffers and close them etc
 vim.keymap.set('n', '<leader>W', ':bd<cr>:bprevious<cr>', { desc = 'Close current buffer window and open previous' })
 vim.keymap.set('n', '<leader>WW', ':%bd|e#|bd#<cr>', { desc = 'Close all buffers but this' })
+vim.keymap.set('n', '<leader>WS', ':buffers<cr>:bd ', { desc = 'Select buffers to close' })
 vim.keymap.set('n', 'N', ':BufferLineCycleNext<cr>', { desc = 'BufferLine Cycle_[N]ext' })
 vim.keymap.set('n', 'P', ':BufferLineCyclePrev<cr>', { desc = 'BufferLine Cycle_[P]rev' })
 
