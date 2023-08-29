@@ -32,4 +32,13 @@ gui:
       - black
 ```
 
+or:
+
+```yml
+gui:
+  theme:
+    selectedLineBgColor:
+      - '#191970'
+```
+
 This will set the highlight color to black, which is imo much better than the original one.
