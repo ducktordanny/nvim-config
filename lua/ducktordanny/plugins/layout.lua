@@ -96,6 +96,11 @@ return {
     end,
   },
 
+  {
+    'christoomey/vim-tmux-navigator',
+    lazy = false,
+  },
+
   -- Markdown preview
   { 'ellisonleao/glow.nvim', config = true, cmd = 'Glow' },
 }
