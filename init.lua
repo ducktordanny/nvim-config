@@ -22,9 +22,10 @@ require('lazy').setup({
   { import = 'ducktordanny.plugins' },
 }, {})
 
-require("ducktordanny.settings")
-require("ducktordanny.remaps.basic")
-require("ducktordanny.remaps.lsp")
-require("ducktordanny.remaps.telescope")
-require("ducktordanny.remaps.treesitter")
-require("ducktordanny.remaps.formatting")
+require 'ducktordanny.settings'
+require 'ducktordanny.globals'
+require 'ducktordanny.remaps.basic'
+require 'ducktordanny.remaps.lsp'
+require 'ducktordanny.remaps.telescope'
+require 'ducktordanny.remaps.treesitter'
+require 'ducktordanny.remaps.formatting'

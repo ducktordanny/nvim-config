@@ -1,3 +1,8 @@
+-- tab size
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -24,7 +29,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Vertical line for character limit in a line
-vim.o.colorcolumn = "120"
+vim.o.colorcolumn = '120'
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
@@ -48,7 +53,7 @@ vim.o.wrap = true
 vim.o.linebreak = true
 
 -- Backspace
-vim.o.backspace = "indent,eol,start"
+vim.o.backspace = 'indent,eol,start'
 
 -- Split windows
 vim.o.splitright = true
