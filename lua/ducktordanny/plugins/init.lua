@@ -82,6 +82,14 @@ return {
         section_separators = '',
       },
       sections = {
+        lualine_b = {
+          'branch',
+          'diff',
+          {
+            'diagnostics',
+            symbols = { error = '🚨', warn = '⚠️ ', info = 'ℹ️ ', hint = '💬' },
+          },
+        },
         lualine_c = {
           {
             'filename',
