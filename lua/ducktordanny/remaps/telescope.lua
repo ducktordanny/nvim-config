@@ -5,14 +5,17 @@ require('telescope').setup {
     mappings = {
       i = {
         ['<C-u>'] = false,
-        ['<C-d>'] = false,
+        ['<C-d>'] = 'delete_buffer',
+      },
+      n = {
+        ['<C-d>'] = 'delete_buffer',
       },
     },
     file_ignore_patterns = {
-      "node_modules",
-      "build",
-      "dist",
-    }
+      'node_modules',
+      'build',
+      'dist',
+    },
   },
 }
 
@@ -35,3 +38,4 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope').extensions.live_grep_args.live_grep_args, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
